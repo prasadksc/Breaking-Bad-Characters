@@ -10,7 +10,7 @@ const CharacterPage = (props) => {
     const id = props.match.params.id
 
 
-    function getCourseById(characters, id) {
+    function getCharactersById(characters, id) {
         const char_id = parseInt(id)
         const char = characters.filter(c => c.char_id === char_id );
         if (char) return char[0];
@@ -18,7 +18,7 @@ const CharacterPage = (props) => {
     }
     
     //fetch the objects one by one
-    const character = getCourseById(characters, id)
+    const character = getCharactersById(characters, id)
 
 
 
